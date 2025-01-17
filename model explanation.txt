@@ -1,0 +1,68 @@
+2.1 model
+227x227x3 --> 57x57x64 (kernel = 3x3x3)
+
+apply 64 kernels so output is [something x something x 64]
+
+apply 3x3x3 kernel with stride = 2 and padding = 1.
+output is 114x114
+
+ReLu
+
+apply max pooling with 2x2 window, stride = 2, and padding =0.
+output is 57x57
+
+
+
+
+57x57x64 --> 15x15x128 (kernel = 3x3x64)
+
+apply 128 kernels
+
+apply 3x3x64 kernel with stride = 2 and padding = 2.
+output is 30x30x128
+
+ReLu
+
+apply max pooling with window = 2x2, stride = 2, and padding = 0.
+output is 15x15x128
+
+
+
+15x15x128 --> 4x4x256 (kernel = 3x3x128)
+
+256 kernels
+
+apply 3x3x128 kernel, stride =2, padding =1,
+output is 8x8x256
+
+ReLu
+
+max pooling, 2x2 window, stride = 2, padding 0
+
+
+
+4x4x256 --> 1024
+
+flatten to 4096
+
+relu
+
+fc layer to 1024
+
+
+
+1024 --> 1024
+
+relu
+
+fc layer to 1024
+
+
+
+1024 --> 2
+
+relu
+
+fc layer to 2
+
+

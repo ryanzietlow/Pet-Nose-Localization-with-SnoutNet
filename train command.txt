@@ -1,0 +1,11 @@
+#training with no augment
+python train.py -e 50 -b 500 -s lab2.NoAug.pth -p loss.lab2.NoAug.png
+
+#train with flip
+python train.py -e 50 -b 500 -t flip -s lab2.flip.pth -p loss.lab2.flip.png
+
+#train with saturation
+python train.py -e 50 -b 500 -t saturate -s lab2.saturate.pth -p loss.lab2.saturate.png
+
+#train with all augments
+python train.py -e 50 -b 500 -t all -s lab2.AllAug.pth -p loss.AllAug.flip.png

@@ -1,0 +1,11 @@
+#test with no augment
+python test.py -b 500 -s lab2.NoAug.pth
+
+#test with flip
+python test.py -b 500 -t flip -s lab2.flip.pth
+
+#test with saturation
+python test.py -b 500 -t saturate -s lab2.saturate.pth
+
+#test with all augments
+python test.py -b 500 -t all -s lab2.AllAug.pth
